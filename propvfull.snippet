@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Virtual property with field</Title>
+            <Description>Creates a property with virtual modifier and a field</Description>
+            <Author>Alexandre Heinen</Author>
+            <Shortcut>propvfull</Shortcut>
+            <SnippetTypes>
+                <snippettype>SurroundsWith</snippettype>
+                <snippettype>Expansion</snippettype>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[$end$private $Type$ $Field$;
+                    public virtual $Type$ $Property$
+                    {
+                        get { return $Field$; }
+                        set { $Field$ = value; }
+                    }]]>
+            </Code>
+            <Declarations>
+                <Literal>
+                    <Id>Type</Id>
+                    <Default>string</Default>
+                </Literal>
+                <Literal>
+                    <Id>Property</Id>
+                    <Default>PlaceHolder</Default>
+                </Literal>
+                <Literal>
+                    <Id>Field</Id>
+                    <Default>placeHolder</Default>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

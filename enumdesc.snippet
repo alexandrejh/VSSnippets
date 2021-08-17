@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Enum with Description</Title>
+            <Description>Creates a enum value with Description anottation</Description>
+            <Author>Alexandre Heinen</Author>
+            <Shortcut>enumdesc</Shortcut>
+            <SnippetTypes>
+                <snippettype>SurroundsWith</snippettype>
+                <snippettype>Expansion</snippettype>
+            </SnippetTypes>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[[$end$Description("$Description$")]
+                        $Enum$ = $Value$,]]>
+            </Code>
+            <Imports>
+                <Import>
+                    <Namespace>System.ComponentModel</Namespace>
+                </Import>
+            </Imports>
+            <Declarations>
+                <Literal>
+                    <Id>Description</Id>
+                    <Default>Description</Default>
+                </Literal>
+                <Literal>
+                    <Id>Enum</Id>
+                    <Default>Enum</Default>
+                </Literal>
+                <Literal>
+                    <Id>Value</Id>
+                    <Default>0</Default>
+                </Literal>
+            </Declarations>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
